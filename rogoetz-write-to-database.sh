@@ -19,3 +19,6 @@ echo "Congratulations, your data has been entered successfully."
 #put database into a .sql file 
 echo "Survey data dumped to file `date --iso-8601=seconds`-$MYDATABASE.sql"
 mysqldump -u"$MYSQLUSER" -p"$MYSQLPASS" $MYDATABASE > `date --iso-8601=seconds`-$MYDATABASE.sql
+
+#remove files from mysql
+sudo rm /var/lib/mysql-files/tmp.csv
